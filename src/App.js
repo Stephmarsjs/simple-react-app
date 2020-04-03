@@ -24,9 +24,9 @@ componentDidMount() {
         </div>
         {posts.map((post) => (
           <div className="card" key={post.id}>
-          <div className="card-header">
-            #{post.id} {post.title}
-          </div>
+            <div className="card-header">
+              #{post.id} {post.title}
+            </div>
           <div className="card-body">
             <p className="card-text">{post.body}</p>
           </div>
