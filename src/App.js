@@ -16,23 +16,25 @@ componentDidMount() {
    .then(json => this.setState({ posts: json }))
 }
   render() {
+    const { posts } = this.state;
     return (
       <div className="container">
         <div className="jumbotron">
           <h1 class="display-4">Blog posts</h1>
         </div>
-        <div className="card">
+        {posts.map((post) => (
+          <div className="card" key={post.id}>
           <div className="card-header">
-            Featured
+            #{post.id} {post.title}
           </div>
           <div className="card-body">
-            <h5 className="card-title">Special title treatment</h5>
-            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <p className="card-text">{post.body}</p>
           </div>
+          </div>
+          ))}
         </div>
-      </div>
-    );
-  }
-}
+        );
+      }
+    }
+    
 export default App;
