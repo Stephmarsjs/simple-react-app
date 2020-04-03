@@ -1,7 +1,10 @@
-.app .card {
+.app .card{
     width: 18em;
-    margin: 10px;
+    margin-bottom: 10px;
 }
+.jumbotron {
+    text-align: center;
+  }
 
 .users {
     display: flex;
