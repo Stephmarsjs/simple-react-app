@@ -1,0 +1,10 @@
+.app .card {
+    width: 18em;
+    margin: 10px;
+}
+
+.users {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
